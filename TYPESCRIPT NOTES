@@ -1,0 +1,1153 @@
+**TYPESCRIPT**
+==============
+
+Array:
+**Declaring :
+=============
+-you can use var, let or const.
+-array uses the data type with meta character [] .which specifies a range of values.(min to max)
+
+let arrayName:string[];
+-"any" type can handle various types of values.
+let arrayName:any[];
+-array can handle vaious collection of valuess then it knows as "tuple". 
+-you can initialize or assign memory for array by using meta characters []" or array constractor"Array()".
+
+**initilizing:
+==============
+let values:string[]=[];
+let values:string[]=new array();
+
+**assigning:
+============
+let values:string[];    -->dcaring.
+values=[];  		-->assigning.
+values=new Araay() 	 -->assigning
+
+FAQ:WT is diff b/w [] and Array?
+Ans:
+
+**Array Manipualation
+=======================
+-ts can use all js array functions to pmanipulate array.
+
+**Read elements from array:
+===========================
+toString() :it returns alla array elements seperatedwith ",".
+join()     :it returns all array elements by using a custom delimeter.
+filter()   :it uses a  conditons and returns all elements that are matching with condtion.
+find()      :similAR to filter but returns only 1st occurance value that matches the condition.
+slice()  :it can extract elemetns based on index numbers.
+
+**
+find and filter using this syntax:
+arrayName.find(function(val){
+returen val|condition:
+});
+
+** use loops and iterators
+*loop require d a condition,initilization,and counter
+for( var i=0; i<length;i++ )
+{
+}
+
+*iterator is a software design pattern used to read elements from a collection in a sequencial order.
+*it doent require explict initilizer,condition or counter.
+for..in  ->iterates throught propertys .
+for..of  ->iterates throught values
+
+
+**Add elements into array:
+==========================
+push()  :add new element(s) as last item (s), towards the end.
+unshift() : add new element(s) as first item(s)
+splice()  : add new elements at specific postion. index number start with 1.
+
+syntax :
+arrayName.splice(startIndex,deleteCount,"Newitems..,..,");
+
+**Removing elements from array:
+==============================
+pop()  :it removes and returnes the last elemets.
+shift()  :it removes and returns first element.
+splice()  :it removes elements from specific index.  and returns an array of removed item
+ex:splice(startIndex,deletecount)
+
+**sorting array:
+sort()    :it changes elements in acending order.
+reverse() : it arranges the elements in reverse order[]right to left or bottom to top].
+
+**search for any value in array:
+indexOf()   : search for value in aray and returns its index.if value not found thejm retuns -1.
+
+lastIndex() : it can search for values in aray and retuens the last occurance index.
+find()      :
+filter()    :
+
+
+**Array destruction:
+====================
+-it is a technique to destrction the stracture of array and retrive the elements from arry in order to store in individual memory references.
+
+**object type
+===========
+-object is computer programming  comprices of data and logic.
+-data stored in the propertys.
+-logic is defined in functions.
+-ts object uses typeinference.
+-{type inference  where th data of any property is determined accorfding to the value defined.it will not allow explicit types.}
+-the memnbers of any object are accesseble with in the object by using "this" keyword and outside object by using "object name"
+
+**Array of object:
+=================
+-it is "collection" of objects.
+-mostely used represent our data
+-it is formate of data which often resembless json.
+-object formate with key and value is json.
+-there is no specific datatype of json type data collection.
+-we have to use "any" as type.
+
+**regular expression:
+=====================
+-It allocates memory store a regular expression, which is a pattern enclosed in"//".
+-regular expression uses a pattern to verify the formate of input value.
+-pattearns are bulit in meta chracters and qntifiers.
+- ts doesnt provide by aresureved datatype for regualar expression.you have to use "any" type.
+
+let regExp: any=/pattern/;
+-you have to verified with regualr expressiom by using "match()" function. it is boolean function that retuns true or false.
+
+**DAte TYpe:
+============
+-js and ts librarys doesnt provide any specific reserved type for date.
+-"any" type is used for date values.
+-to store a date value in memory , you have initilize memory by using "Date()"[constructor of date object]
+
+-let personDOB:any=new Date();  //loads current date.
+			=new Date("YY-MM-DD");
+
+-date functions:
+================
+getHours()      -hour number 0-23.
+getMinutes()    -minutes number 0-59.
+getSeconds()    -seconds number 0-59.
+getMilliseconds -milliseconds  number 0-999 (1000millise=1sec).
+getDay()        -weekday number 0-6 (0 is sunday).
+getMonth()      -month number 0to 11 (0 is january).
+getDate()       -date of day [1-31].
+getYear()       -obsolete(no longer use) it returns as per "Y2K".
+getFullYear()   -it returns full yrar number.
+ toDateString()
+ toLocalDateString()
+ toLocalDateString()   **these are pre defind formates for printting date and time.
+ toTimeSting()
+ toLocalTimeString()
+
+-set date values dynamically:
+=============================
+setDate()
+setFullYear()
+setHours()
+setMinutes()
+setMilliseconds()
+setMonth()
+setMonth()
+setTime()
+setSeconds() 
+
+1.ternary operator:[? :]
+(condition)?stetement_if_true:statement_if_falsee
+
+2.typeof: it is special operator used to  know the datatype of value stored in any specific memeory refrence.
+syn: typeof refaname;  //nmber string
+
+3.intancesof operator:it is boolean type  operator which verifes wheathe the object is derived from specific class.
+syn: objectname instanceof className;  //true - false
+
+4.delete:it is special operaator used to remove any property from an object .uou cant remove readonly propertys.
+syn: delete objectname.property
+
+5.of operator: it is a special operator used to access the values from collection using any iterator.
+syn: for(var item of data){}
+
+6.void :it is a special operator used to designate any dunctionality that will not return a value for the that specific state.
+ -return keyword used in void method().
+ function f1(): void(){
+return;
+}
+
+statements in ts:
+=================
+-in computer progremming statements are used to control the execution flow.
+selection statements :if,else,switch,case,default.
+iteration&looping    :for,while,do while,for..in, for..of.
+jump statements      :break,continue,return.
+exeption handlimg    :try,catch,throw,finally
+
+oops in ts:
+===========
+-object oriented programming system. two conserns
+-reusability
+-code seperation.
+
+features of oop:
+===============
+-code reusability.  -inhertance,
+-code seperation.   
+-code extensibility.
+-mainatinability.
+-testbility.
+-loosely coupled.
+-code security.
+
+stack exapmle:browser history,recently viewed files.
+
+charactericts: abstraction,encapsulation,polymorphism,inheritance.
+==============
+-hiding the implementation-abstraction
+draw back of oop:
+================
+-uses more memory.
+-slow
+-cant directly interact with hardware services.
+
+
+contracts in ooops:
+===================
+-in oop every component is designed as per the specified contract.
+-contract defines set of rules for designing a component.
+-technically contracts are defined as "interface".
+-interface defined set rules for designing components in oop.
+-the keyword "interface" is used to create an interface .
+syntax:ex:creating table(conceptual,physical,logical,entity).
+interface interfaceName
+{
+//rules
+}
+-every rule in contract must contain only "declaration".it should not have any initialization,rendering or defination.
+-the propertys and methods defined in a contract must contain only declaration.
+
+interface Iproduct
+{
+Name:string:"sai";  	 //invalid
+Total(){};         	 //invalid
+}
+
+interface Iproduct
+{
+Name:string;  		 //valid
+Total():number;          //valid
+}
+
+-the contract members cant have any access restriction for modification.you cant use access modifier for contract member.typescript  access modifier are:
+public
+private
+protected
+-the contract member have access spedcifier:readonly.
+-every member defined in a contract is mandatory by default.
+
+optional rules contract:
+=============================
+-a contract can contain optional rules.
+-rules can optional beacause your component can have goals.
+-every compoment will have objective and goal.
+-objective must be achived and time bound.
+-object is non-nullable.
+-every member in contractis by defualt non-nulable.
+-goal is not mandatory to achive .it is optinal.
+-contrat can be  defined with optional rules by using a null reference character "?".
+-"?" ios used to define a non-nullable rule into nullable.
+
+syntax: interface interfaceName{
+		property?:type;
+		mentod?():type;
+}
+
+
+**readonly members in contract:
+================================
+-a readonly member will not allow to re-define a value or functinoality after initilization.
+-readonly is an access specifier
+
+**extending contracts:
+======================
+-contract can be extended with rules.
+-its intention is to extended the contract without disturbing the existing contracts.
+-"extends" is a keyword that configures relation beetween contracts.
+-exising contract is known assuper contract.
+-newly created contract is known as derived contract.
+-you can implement derived contract to access the rules from both super and derived.
+
+syn:
+	interface super{
+	//super rules
+	}
+	interface derived extends super{
+	//derived rules
+	}
+	let obj:derived={
+	//rules of both super and derived
+	}
+
+-a contract can extend multiple contracts by using 
+		a)multilevel hierarchy
+		b)multiple hierarchy
+-multi level hierarchy uses incremental model  i.e:extending the derived contract and add new rules to contract.
+-Multiple hierarchy allow a single contract to extend all existing contracts.
+
+**Class in oop:
+===============
+-in computer programming class is program template .
+-it provides set of propertys and methods to store data and handle manipulation.
+-class is used as model to represent the data we are working with.
+-class is uses as an logical entity to represent bussines.
+-class is ussed as a blue print for creatng similar type of objects.
+-class comprises of set of members which includes:
+	a)propertys
+	B)methods 
+	c)acessors
+	d)constrocts.
+
+--class is desinged by using keyword class.
+-a class can be configured as 2 ways:
+	a)Class declaration.
+	b)Class expression.
+
+Class declaration.:
+====================
+-it comprices of class with a name.
+-mebers are encapsulayted in {}.
+-you can load the class into memory by using class name.
+syn:
+	class classname{
+	//members of the class
+	}
+
+**class expression:
+=================
+-it comprises of class without a name.
+-it is loaded into memory when required.
+-it contains a reference name,which you can use to access it members.
+syn:
+	let emp =class{
+	//members of the class
+	}
+**static and non-static members:
+=============================
+-a class comprises of static and non-static members.
+static:
+========
+-static uses continoues memory .
+-memory  allocated for first object will continue for other objects.
+-it occupies more memory 
+-security issues.
+- but good for continues operation.
+
+non-static:
+===========
+-it uses descreate memory .
+-memoryis newly allocated for every object.
+-it disposes the memory after using.
+-can`t handle continiues operations.
+-but uses less memory.
+
+-TS static members in a class are defined by using "static" keyword. and they are accessed by using class name.
+-TS non-static members are the members without static marking.and they are accessed with in the class by using "this" keyword and outside the class by using  an instance of class.
+
+access modifiers for members:
+==============================
+-access modifiers defines the restricton about  how a members is accessed from various locations. this keyword
+-ts supports 3 accesse modifers for members:
+1.public
+2.private
+3.protected
+
+public:
+=======
+-it defines accessbility for members in class.
+-so that it is accessble within the claass and by using an object of classs from any loaction.
+private:
+========
+it defines accessbility for a member in class.
+-it is not accessible through any medium out side the class.
+protected:
+==========
+-it is accessbility for a member in class.
+-it can be accessed outside thesuper class with in derived class only by using a derived class object.
+
+**Accessors in ts:
+==================
+-Type script supports getters/setters as a way of intercepting access to a member of classes.
+-accessors allow to define authorized access to any members.
+-accessrors give a fine-grained control over member and its accessibility.
+-you can restrict getting and setting of values according to the state of applications.
+syn:
+ 	get PropertyName(){
+	return PropertyValue;
+	}
+	set PropertyName(newValue){
+	oldValue=newValue;
+	}
+
+**class members:
+================
+-a typical typescript class comprises of
+	a)constructor
+	b)properties
+	c)methods
+	d)accessors
+
+**Constructor:
+==============
+-constructor is a special type of method.
+-constructor methodloads and executes automatically when memory is allocated for class.
+-normal methods require an explicit call.
+-Constuctor initilizes memory in a class where it can load functionality that executes implicitly.
+-Typescript constructor is designed  by using "constructor"keyword. cant define any name.
+-it is anonymous method i.e no name for constructor required explicitly.
+-Class name is implicitly used for constructor.
+syn:
+====
+class Demo
+{
+	constructor(){
+}
+}
+let obj =new Demo; //parameter less constructor is called.
+let obj = new Demo(); //args for constrctor can be passed.
+
+-Constructor can be parameterized.
+-The args are passed into parameterized constructor at the time of allocating memory for class.
+**
+1.what is constructor?
+2.purpose of constructor?
+3.cam we use multiple constructors?
+-multiple constructor implementations are not allowed.
+4.can we define access modifiers for constructor?
+-yes
+5.can interface have a constructor?
+a>no
+6.why interface cant have construcoter?
+a>constructor requirea implementation os functionality.and interface will not allow.
+7. why multiple inheritences is not supported for classes?
+a>constructor deadlock.
+8.can a constructor have parameter?
+a>yes.
+9.can it have multiple parameters?
+A>yes.
+
+propertirs:
+==========
+-properties are used to store the data.
+
+FAQ:
+1.what is diff b/w variable and property?
+ans:		let Name:string="sai"   //varibale
+		public Name:string="tv";  //propeerty
+
+**
+-variables are immutable.
+-their state cant be changed after created.
+-less secured.
+-lack of code security.
+**
+-propety are mutable.
+-their state cam be changed after created.
+-more secured.
+-have code security.
+-more grained control by using accessors.
+
+-class wil not allow varibales.
+-class can contain only property.
+-propertys can be defined with accessors.
+
+FAQ:
+2.what is the purpose of accessors?
+Ans:provides authorized access to propertys.
+
+-propertys can be defimed with access modifiers like
+public,private,protected.
+-property can be configured as "readonly".
+syn: for property
+class demo{
+public Name:string="tv";
+}
+
+-property can be static or non-static.
+-static property is accessible with in the class or outside class by using class name.
+-non static property is accessible with in the class by using "this" keyword an outside the class by using "instance"of clASS.
+**methods in class:
+===================
+-methods define the actions to be performed.
+-logic is defind in methods.
+-the behaviour object us controlled by using methods.
+
+FAQ:what is diff b/w a function method and procedure?
+Ans:
+function -always intended to a avalue.
+method  -intended to return a value.
+procedure-may or may not return value.
+-function are defined in typescript by using "function" keyword or "function" constructor.
+
+	function f1(){
+	}
+	let f2=new function("a","b","return a+b");
+
+FAQ:
+1.WT is diff b/w "function" and "Function"?
+ans.
+ function keyword.and its defines function statically.
+ Function defins function constructor. and its A function dynamically.
+
+
+-class will not allow functions directly to be configured.
+-class can call function ,but cant have defination for function.
+
+declaring and defining a function:
+==================================
+-it comprices of 
+a)declaration.
+b)defination.
+c)signature.
+function hello(name:string):void
+{
+
+}
+
+function hello(name:string):void  ->declaration of function.
+{}                                ->defination
+hello(name:string)                ->signature
+
+-declaration is for compiler to understand the type of value and parameters that function uses and returns.
+-defination comprises of actions to perform.
+-signature is used to access and use the function.
+
+syn:function hello():void{
+cosnole.log(`hello sai`);
+}
+hello();  ->signature
+-there are various techniques of defining a function.
+1.function keyword.
+2.anonymous type
+3.function constructor.
+4.lambda notation.
+
+functiom keywprd :
+==================
+-it uses "functon"keywprd and function name.
+syn:
+function hello():void{
+console.log("hello");
+}
+hello():
+
+anonynmoustype:
+===============
+-it refers to a function that doesnt have a name.
+-it is loaded into a named location(variable,property)and accesseed by using the names location.
+-they are used in callback mechanisam ,where function is called and executed automatically according to the state and situation.
+
+syn:
+let hello=function(){
+console.log(sai`);
+}
+hello();
+*********
+let hello= function(){   //hello is variable
+console.log(`sai`);
+}
+console.log(`type of hello);
+
+FAQ:Can we define and access anonymous function without names location?
+Ans:yes.
+syn:(function(){
+console.log(`hello typesciot`);
+})
+();
+
+**function constructor:
+=======================
+- it allows to construct a function dynamically.
+-it can configure and change the functionality as per the state and situation.
+-it is define with arguments which are strng type.
+-arguments includes param name, and return value.
+
+syn:
+let param1:string="a";
+let param2:string="b";
+let operation:string="return a+b";
+let f1=new Function(param1,param2,operation);
+console.log(f1(12,3));
+
+syn:
+invalid cant define the type .it is by default any type ,which uses types inference.
+let f1=new Function("a:number","b:number","return a+b"); //invalid
+
+**Lamda notation for function:
+===============================
+-it is shorthand notation of writing function.
+-it is to minify the logic or code.
+-it is a technique used to define function in a short hand way.
+
+syn:
+params=>return
+(return)=>return
+(return)=>{}
+
+()  ->function parameters
+=>   ->definition and return
+{}   ->block for encapsulating statements.
+
+syn:
+Defined in ts:()=>{}
+Return in js:(function () { });  //anonymous function
+
+-all lamda functions are anonymous.
+syn:
+let sai=()=>{}  //reference name is sai
+ sai();
+
+**with one parameter
+let sai=Uname=>console.log(`hello ${ typeof Uname}`); 
+sai("saikira");
+
+**with multiple parameters
+let sai=(name,age)=>console.log(`hello ${name} and your age is ${age} `);  
+sai('saikiran',23);
+
+**withpout parameters:
+let hello=()=>console.log(`welcome to lambda`);
+hello();
+
+**With strongle typed parameters.
+let hello=(name:string,price:number)=>console.log(`product name is = ${name} and its  price is =${price} `); 
+hello("samsung",23456.00);
+
+**with multiple statements:
+let hello=()=>{console.log(`sai kiran`) ;console.log(`shivaprasad`)}; 
+hello();
+
+filters syn:
+===========
+ products.filter(function(product){
+return product.category=="electronics"});
+
+using above as:
+===============
+products.filters(product=>product.category=="electornics"); 
+
+count:
+======
+products.filters(product=>product.category=="electornics").length;
+
+**
+let products:any=[
+{Name:"TENNISBALL",Catergory:"crickect"},
+{Name:"BALL",Catergory:"vollyball"},
+{Name:"BAT",Catergory:"crickect"},
+{Name:"WICKETS",Catergory:"crickect"}
+];
+let playing=products.filter(product=>product.Catergory=="crickect"); //ONLY FILTER THE CRICKET
+for( var item of playing){
+    //console.log(`${item.Name} and this properties are ${item.Catergory}`);
+    console.log(`${item.Name} `);
+}
+
+**
+let products:any=[
+{Name:"TENNISBALL",Catergory:"crickect"},
+{Name:"BALL",Catergory:"vollyball"},
+{Name:"BAT",Catergory:"crickect"},
+{Name:"WICKETS",Catergory:"crickect"}
+];
+let playing=products.filter(product=>product.Catergory=="crickect"&&product.Name=="WICKETS");// WITH LOGICALexpreession with cricket and wickets
+for( var item of playing){
+    //console.log(`${item.Name} and this properties are ${item.Catergory}`);
+    console.log(`${item.Name} `);
+}
+
+
+**
+let products:any=[
+{Name:"TENNISBALL",Catergory:"crickect"},
+{Name:"BALL",Catergory:"vollyball"},
+{Name:"BAT",Catergory:"crickect"},
+{Name:"WICKETS",Catergory:"crickect"}
+];
+let playing=products.filter(product=>product.Catergory=="crickect"); //ONLY FILTER THE CRICKET
+let crickectsCount:number=products.filter(product=>product.Catergory=="crickect").length;  //COUNTING THE ARRAY LEGTH
+for( var item of playing){
+    //console.log(`${item.Name} and this properties are ${item.Catergory}`);
+    console.log(`${item.Name} `);
+}
+console.log(`total number of electronics products:${crickectsCount}`);
+
+
+**
+let products:any=[
+{Name:"TENNISBALL",Catergory:"crickect"},
+{Name:"BALL",Catergory:"vollyball"},
+{Name:"BAT",Catergory:"crickect"},
+{Name:"WICKETS",Catergory:"crickect"}
+];
+let playing=products.filter(product=>product.Catergory=="crickect"); //ONLY FILTER THE CRICKET
+let crickectsCount:number=products.filter(product=>product.Catergory=="crickect"&&product.Name=="WICKETS").length;//WITH LOGICAL OPERATIONS
+for( var item of playing){
+    //console.log(`${item.Name} and this properties are ${item.Catergory}`);
+    console.log(`${item.Name} `);
+}
+console.log(`total number of electronics products:${crickectsCount}`);
+
+**Function parameters:
+=======================
+-function can be parameter less.
+-function can be parameterized.
+
+what is the purpose of parameter in a function?
+-a parameter in function can be modify the functionality.
+-same function can be handled for different states.
+
+syn:without parameters:
+function PrintNumbers(){
+for(var i=1; i<=10;i++){
+    console.log(i)
+}
+}
+PrintNumbers();
+
+syn:with parameters
+function PrintNumbers(upto:number){
+for(var i=1; i<=upto;i++){
+    console.log(i)
+}
+}
+PrintNumbers(5);
+console.log(`-----------------`)
+PrintNumbers(100);
+
+syntax:
+function Name(param:type)  ->formal parameter
+{
+}
+Name(12);                  ->actual paramter/arguments
+
+-every parameter defined in function definition is by-defalut mandatory.
+-you can define optional parameters by using"?".
+-optional formal parameter can be followed by reqired formal parameter.(parametrs are ordered dependency).
+syntax:
+function Product(Id?number,Name:string){  ->not valid
+    
+}
+Product(1,"sai");
+
+syntax:
+function Product(Id:number,Name?string){   ->valid
+    
+}
+Product(1,"sai");
+
+-if optional parameter is not define then you have handle it by using "undefined"type.
+function Name(name:string,age?:number){
+    if(age==undefined){
+        console.log(`name${name}`)
+    }else{
+        console.log(`Name=${name}\n and Age =${age}`);
+    }
+
+}
+Name("saikiran");
+console.log("those areoptional");
+Name("shivaprasad",24);
+
+note:parameters have order dependency that is the reason why optional parameters are not allowed to be follow by required parameter.
+-parameter can handle any type of value both primitive and non primitive and even a function.
+EX:array as parameter:
+//ARRAY AS A PARAMETER
+function PrintList(list:string[]){
+    for(var item of list){
+        console.log(item);
+    }
+}
+PrintList(["sai","kiran","saikiran"]);  //we are sending array type passing values
+console.log(`-------------------`);
+PrintList(new Array('shiva','prasad','shivaprasad'));
+console.log('*******************');
+let catergories:string[]=['ravalika','devaiah','malleshwari'];
+PrintList(catergories);
+
+-you can define a function with multiple array type parameyter along with other parameter  in any order.
+function PrintList(lists:string[],sales:number[],count:number){
+    for(var list of lists){
+        console.log(list);
+    }
+    for(var sale of sales){
+        console.log(sale)
+    }
+    console.log(`Count=${count}`)
+}
+PrintList(["sai","kiran","saikiran"],[10,34,45],6);  //we are sending array type passing values
+console.log(`-------------------`);
+
+-ES6 introduced Rest parameters.
+-A rest parameter can allow multiple values as argument.
+-One parameter is enough to handle all arguments.
+-rest parameter defined with "..."
+-Every function can be defined with only one rest parameter.
+-Rest parameter must be the last parameter in formal list.
+-Rest parameters reads upto end of argument.
+EX:VS CODE SEE
+
+OBJECT AS A PRAMETER:
+====================
+Syntax:
+function PrintList(obj:any){
+    for(var property in obj){
+        console.log(`${property}:${obj[property]}`);
+    }
+}
+PrintList({Name:'sai',Age:23});
+
+FUNCTION AS PARAMETER:
+======================
+-function as parameter is never allowed, function are passed as arguments.
+
+Syntax:
+let pwd:string="sai";
+function PrintList(success:any,failure:any){             //success is memory ,its a referemce name
+if(pwd=="sai"){
+    success();
+}else{
+    failure();
+}
+
+}
+PrintList(function(){
+    console.log(`login success`);
+},function(){
+    console.log(`login failure`);
+});
+
+FUNCTION RETURN TYPE:
+=====================
+FAQ:Why a function requires return type?
+A:to return a value
+FAQ:why and when a funtion is designed to a return a value?
+A:functions are desingned to bulid any expression then every expression must return a valure,which is specified by using return type.
+//function return type.
+ function Message(str):string{
+     return str.toUpperCase();
+ }
+function Power(a,b):any{
+return Math.pow(a,b)
+}
+let msg:string=Message("hello sai kiran");
+let pow:number=Power(4,6);
+console.log(pow);
+console.log(msg);
+
+-if fucntion ia not intended to return any value then it is not defined to return a type.you can configure such functions as void.
+-Void type derived form "C anda Alogal68".
+-it will not any result to caller.
+-it comprises of funvtion statements to execuite.
+
+Returing      and                   Rendering
+==============================================================
+-evalutes a value and            Generating the statements and
+return the value to keep         render output as response
+in any reference and use
+in application.
+
+void ->rendering
+type ->returing
+
+FAQ: can a function with void are return type can use the "return"keyword?
+A:yes
+FAQ:Whst is the purpose of return keyword in void function?
+A:a define un-reachble code with in function.so that compiler cant reach the code.it is mostly used by developerds in unit tesing.
+FAQ:Can a function retrurn  more than on type of value?
+A:yes ts supports Union of type.
+
+Function Recursion:
+======================
+-recursion is a technique where a function is called with in the context.
+//USING THE RECURSION
+function fact(n){              //here fact is a function
+    if(n==0){
+        return 1;
+    }else{
+        return n* fact(n-1); //hear function with in the function fact
+    }
+}
+console.log(`dactorial ${fact(50)}`);
+
+POLYMORPHISAM:
+==============
+-It is one of the key feature of oop.
+- it is a feature that allows a component to work for various situatuions with differtrnt behaviours.
+-one component is enought for various purpose.
+-in oop you can design a component with different behaviour by allocating different types of memory.
+***
+-a single base class object using the memory of multiple derived classes.means one object can we use several ways.
+
+**GENERICS IN TS:
+=================
+-Generics is type safe.
+-you can configure any component as typesafe component.
+-however it use strongly typed features for component when it knows the type of value of deal with.
+-the datatype initially not know to compiler, when a value is provided according to the value  type it can fix the datatype of any reference and will not allow any another type.
+-typescript can use genrics for properties,methods and classes.
+SUYNTAX:
+function funName<type>or<T>(param:T):T(its return type){
+
+}
+
+//generics
+function PrintValue<T>(param:T):T{
+return param;
+}
+console.log(PrintValue<string>("sai kiarn"));
+console.log(PrintValue<number>(45));
+
+note:you cant usse any operator on generic type .you have handle all opearations using functions.
+
+**Generisc are mostley used even with user defined types.(own types).EX
+**Generic method handling array type .EX
+
+Gneric Class:
+============
+-Generic class allows to configure genric type memory of members in a class.
+-While allocating memory you can define type for members.
+so that all members wuth the same type specified.
+
+**library for handling specific type
+connect with database:		conection_class
+MY SQL  ]
+ORACLE  ]     CONNECTION_CLASS<ORACLE>{
+MANGODB ]                 COMMAND/QUERY,MEMBERS
+						}
+                                                                                                                            
+**generic class with user defined type.EX
+
+TS MAPS AND SETS:
+=================
+introduced from ES6 version.
+-Maps is used to deal with disctionary type collection.
+-a key value collection.
+-object can also have key value type collection.
+-object is schema less untill or unless you defined as stringly type.(structure less)
+-Map is used configuring memory map which can handle strongly typed keys and value with structured data.
+-*Map is object that iterates its element in insertion order.
+-it internally uses "for..of"that returns an array of key and value.
+
+MAP                                  OBJECT
+============================================================================
+=doesnt contain default        = contains default keys,which can collidewith
+keys.                          your own keys.
+
+=key can be any type ,         = keys must be either a string or a symbol
+including functions,object
+any primitive type.
+
+=the number of oitem in a map  = the number of item in an object must be
+can be easily retrived its     determined manually. 
+size property.
+
+=map is iterable so that can    =iterating over an object requires obtaining
+be directly iterated.          its keys and values with "for..in".
+
+=performance is better as you   =Not optimized for frequent additions and
+can esily add or remove keys   removals of keys and value pairs.
+dynamically.
+
+MAP IN TS:
+=========
+METHODS                   DESCRIPTION
+=====================================================
+set()     =>add a new item into map collection.
+get()     =>read value for map collection using a key reference.
+delete()  =>remove any item from map based on key reference.
+has()     =>to verify whether the item available or not.
+            it checks and returns boolean true or false.
+clear()   =>remove all item from map collection.
+keys()    =>return all keys 
+values()  =>returns all values.
+entries() =>both key and values.
+size()    =>to return the count of items in collection.
+
+**SET IN TYPESCRIPT:
+===================
+-Set is a collection of keys.
+-Functions
+		add()		-to add values
+		has()		-to verify value
+		delete()	-delete a value
+		size()	-return the size ...etc
+
+**Enum:
+=======
+-It is an enumerator.
+-in computer programming Enum refers to enumerated type.
+-it is also known as enumeration,enum or factor[R language].
+-it is a datatype that consists of a set of named values,which are called as elements,members,enumerals or enumerator.
+-it comprices of collection of contstans.
+-enumas can store and access a set of numeric and string constants.
+-the keyword "enum" is used to create an enumerator.
+-enum can dynamically configure its values based on existing values.
+
+syntax:
+enum EnumName{
+Name=value;
+}
+EnumName.Name   //accessing the name
+
+-If no previous vlaue then the value start with 0.
+NOTE:Enum can initialize value dynamically only for numeric type constants.
+-Enum can be a collectuion of string constants.
+-Enum cant dynamically configure values if they are string type.
+-Enum configure a numeric value for string constants it is defined as starting index value.
+-Enum can contain collection of both string and numeric constants.
+-Enum values cant be re-defined as they are configured as constants in memory.(it is readonly prperty)
+
+FAQ:
+1.Can we declare enum with "const" as access specifier?
+ans:yes.const enums are used to configure enums with expressions?
+
+2.can enum have an expression?
+A:yes
+
+3.CAN your defined a boolean type constants?
+A:directly the boolean true and false are not allowed,javascript can handle them with 0 and 1.
+
+ex:const enum sai{
+A=true,                     //invalid.
+B=false,
+};
+
+4.can wew use all type expressions in enum?
+A:No.enums support only following operators
++,-,*,/,%   -arithematic
+<<,>>,>>    -bitwise
+&,|,^       -binary operators.
+
+5.what is heterogenious enum?
+A:combination both string and numeric type.
+
+6.what is Amibinet enum?
+A:all enums are by default non-Ambient enums,
+all are constants and have initializer.
+Ambient enum refers to non -constant values in a collection ,they doesnt have initilizer.
+
+syntax:
+Enum errorcode{
+NotFound=404,
+Timeout,        //ambient 
+MethodNotAllowed=405
+}
+TimeOut=405
+MethodNotAllowed=405
+
+-1ST OOCURENCE IN STRING
+
+7.What is enum Reverse Mapping?
+A:it is a technique used to access the name of enum constant based on its value.
+
+**TO create a constant type so that constant type can be used for your application whenever used constant values you created a constant type you c impletent and used the enum type
+
+**MODULES IN TYPESCRIPT:  (41 VEDIO)
+========================
+-Module introduced into Jvascript with ECMASCRIPT 2015.
+-Typescript uses modules of javascript.
+-Module is like a component in any framework with colection of various members.
+-You can import modules from external source and use in your application.
+-Modules are executed with in the their own scope ,not in the global scope,
+the variable,functions,classes all are decaleared in a module and they are not accessible outside.
+-To make them accessiblr outside you have to mark them with "export".
+-You can import any module by using "import" reference.
+-Js requires AMD(asynchronous module distribution) amd commonjs like system to handle modules.
+-TS can implicitly handle modules.
+
+FAQ:
+===
+declare:it is not a keyword.
+-denote the debugger
+syn:
+declare let x;  //those are same
+let x:any;
+
+default:
+-You can export many varibles from same file default is used only one in while file. it is a keyword.
+-You can import without using bracket{}. 
+
+exports are of 2 types:
+1.Named Exports
+	-Zero or more exports per module.
+ex:
+export default interface  IProduct{
+
+}
+export  interface ICategory{
+
+
+}
+
+import {ICatgory} from 'filename';  //valid
+import {iproduct} from 'filename';  //invalid
+import IProduct from 'filensme';  //valid
+2.Default Exports
+	-One per module.
+
+
+NAMAESPACE:
+===========
+-A namespace is a collection of related type of sub namespe=aces and classes.
+-You can configure and import namespace in order to access the members of library.
+-Anything defined in a namespce is not global in access,you have to use "export".
+**
+COMPILING THE NAMESPACE:
+>tsc MyApp.ts
+>tsc --outFile MyApp.js MyApp.ts
+>node MyApp.js
+
+
+Templates in Oop:
+================
+-Template comprices of sample design with sample data which you can customize according to your
+requierements and implement in your application.
+-A developwers need to design templates for client so that he can implement according to his requirements.
+-Templates are mostely uses for "rollouts"
+a)end to end implementation.
+b)upgrade
+c)rollout.
+d)support.
+
+ABSTRACT:
+=========
+-Abstract class is used to design templates.
+-Abstarct class comprices of functionalitys both implemented and to be implemented.
+-Technically a class should have all members functionality implemented.
+-If any functinoality is not implemented it should be designed as "abstract class".
+-Abstract classes are defined by usigng "abstract" keyword .
+-Abstract class containes both incomplete and implemented members.
+-You have  to implement an abstract class and defined all in-complete functionality.
+FAQ:
+1.What is diferneece b/w contrscts and template?
+-contract comprices of only rules.
+-You cant define functinoality for rules in contract.
+-It contains only declaration not defination.
+-You cant define access modifier for contract members.
+
+Templste:
+-Tempalte comprices of memebers without implementation and as implemented.
+-Can contai both complete and incomplete.
+-It can  contain only declaration or declaration with defination.
+-You can defined access  modifers for members.
+
+
+-"abstract" indicates that its functionality will be implemented later.
+-if any one number is a class abstract, then entire class must be marked as abstract.
+
+-"The Mechanisam of hiding the members in a class and providing implementation for the complete methods is known as "Abstraction".
+
+
+
+

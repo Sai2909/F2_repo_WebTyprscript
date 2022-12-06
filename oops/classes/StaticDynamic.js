@@ -1,0 +1,16 @@
+var Demo = /** @class */ (function () {
+    function Demo() {
+        this.n = 0;
+        Demo.s = Demo.s + 1; //static members are accessed using class name.
+        this.n = this.n + 1; //dyamic members are accessed using this name.
+    }
+    Demo.prototype.print = function () {
+        console.log(" s=".concat(Demo.s, " n=").concat(this.n));
+    };
+    Demo.s = 0;
+    return Demo;
+}());
+var obj1 = new Demo;
+obj1.print();
+var obj2 = new Demo;
+obj2.print();
